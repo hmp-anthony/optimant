@@ -1,4 +1,4 @@
-add_executable(import_test import_test.cpp)
+add_executable(gd gd.cpp)
 
-target_include_directories(import_test PUBLIC ${autodiff_SOURCE_DIR})
-target_link_libraries(import_test PUBLIC ${autodiff_LIBRARIES})
+target_include_directories(gd PUBLIC ${autodiff_SOURCE_DIR})
+target_link_libraries(gd PUBLIC ${autodiff_LIBRARIES})
