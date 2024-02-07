@@ -5,4 +5,6 @@ project(optimant CXX)
 include(cmake/FetchAutodiff.cmake)
 
 enable_testing()
-add_subdirectory(examples)
+
+include_directories(optimant)
+add_subdirectory(optimant)

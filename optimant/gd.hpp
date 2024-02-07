@@ -3,9 +3,8 @@
 #include <autodiff/gradient.hpp>
 
 using autodiff::base::var;
-using autodiff::functions::cos;
 
-int main() {
+void gd() {
     double a_ = 1;
     double b_ = 1;
 
@@ -25,5 +24,4 @@ int main() {
         b_ = b_ - gamma_*C[b];
         std::cout << a_ << " " << b_ << std::endl;
     }
-    return 0;
 }
