@@ -1,3 +1,4 @@
 add_executable(import_test import_test.cpp)
 
-add_dependencies(import_test autodiff)
+target_include_directories(import_test PUBLIC ${autodiff_SOURCE_DIR})
+target_link_libraries(import_test PUBLIC ${autodiff_LIBRARIES})

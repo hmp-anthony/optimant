@@ -1,11 +1,8 @@
-include(ExternalProject)
-
-ExternalProject_Add(
+include(FetchContent)
+FetchContent_Declare(
   autodiff
   GIT_REPOSITORY https://github.com/hmp-anthony/autodiff
   GIT_TAG origin 
   )
 
-ExternalProject_Get_Property(autodiff install_dir)
-
-include_directories(${install_dir}/src/autodiff)
+FetchContent_MakeAvailable(autodiff)
