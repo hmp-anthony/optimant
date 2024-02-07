@@ -4,24 +4,21 @@
 
 using autodiff::base::var;
 
-void gd() {
-    double a_ = 1;
-    double b_ = 1;
+/*
+template<std::size_t N>
+std::vector<double> gd(const std::vector<double> init,
+                       const double step_size,
+                       const int number_of_steps,
+                       const var fun) {
 
-    double gamma_ = 0.1;
-
-    auto cos_ = autodiff::functions::cos();
-
-    for(int i = 0; i < 100; ++i){
-        var a(a_);
-        var b(b_);
-        // define loss function.
-        auto c = a * a + b * b + cos_(a * a);
+    std::vector<var> var_vector;
+    for(int i = 0; i < number_of_steps; ++i) {
         // obtain gradient of loff function.
-        auto C = autodiff::base::gradient(c);
+        auto C = autodiff::base::gradient(fun);
         // take a step
-        a_ = a_ - gamma_*C[a];
-        b_ = b_ - gamma_*C[b];
+        a_ = a_ - step_size*C[a];
+        b_ = b_ - step_size*C[b];
         std::cout << a_ << " " << b_ << std::endl;
     }
-}
+
+}*/
