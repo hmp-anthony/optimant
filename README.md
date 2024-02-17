@@ -1,8 +1,8 @@
 # optimant
 
-For basic usage see 
+For basic usage see:
 
-'optimant/tests/gd_test.cpp'
+`optimant/tests/gd_test.cpp`
 
 To build :
 `make`
