@@ -7,11 +7,9 @@
 using autodiff::base::var;
 
 TEST(basic, gd) {
-    ASSERT_EQ(1, 1);
-    var a(1);
-    var b(2);
-
-    auto c = (a + b) * b;
-
-    fun_manip(a, c);
+    std::array<var, 2> v = {var(9), var(2)};
+    auto eqn = v[0] * v[0] + v[1] * v[1];
+    auto min = gd(v, eqn, 0.1, 100);
+    ASSERT_NEAR(min[0], 0, 0.01);
+    ASSERT_NEAR(min[1], 0, 0.01);
 }
